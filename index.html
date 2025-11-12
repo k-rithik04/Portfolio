@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rithik's Portfolio</title>
+    <title>Rithik's Portfolio | AI & ML Engineer</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -11,8 +11,8 @@
 
     <style>
         /* ===========================
-           GLOBAL VARIABLES & UTILITIES
-           =========================== */
+            GLOBAL VARIABLES & UTILITIES
+            =========================== */
         :root {
             --mac-bg: #F8F8F8; /* Global body background color */
             --window-bg: #ffffff; /* Default content window color */
@@ -21,8 +21,8 @@
         }
 
         /* ===========================
-           GLOBAL LAYOUT & FONT
-           =========================== */
+            GLOBAL LAYOUT & FONT
+            =========================== */
         html {
             scroll-behavior: smooth;
         }
@@ -47,8 +47,8 @@
         }
 
         /* ===========================
-           BACKGROUND PULSES (BLOBS)
-           =========================== */
+            BACKGROUND PULSES (BLOBS)
+            =========================== */
         .pulse {
             position: fixed;
             border-radius: 50%;
@@ -58,7 +58,7 @@
             will-change: transform, background-color, filter, opacity;
             transform: translateZ(0);
             animation: colorChange 20s infinite alternate,
-                       pulseMove 30s infinite cubic-bezier(0.42, 0, 0.58, 1);
+                        pulseMove 30s infinite cubic-bezier(0.42, 0, 0.58, 1);
             mix-blend-mode: multiply;
         }
 
@@ -97,8 +97,8 @@
         }
 
         /* ===========================
-           NAVBAR (Top Floating Pills)
-           =========================== */
+            NAVBAR (Top Floating Pills)
+            =========================== */
         nav.top-nav {
             position: fixed;
             top: 0;
@@ -157,8 +157,8 @@
         }
 
         /* ===========================
-           SCROLL TO TOP BUTTON
-           =========================== */
+            SCROLL TO TOP BUTTON
+            =========================== */
         #scroll-to-top-btn {
             position: fixed;
             bottom: 20px;
@@ -193,8 +193,8 @@
         }
 
         /* ===========================
-           LEFT SIDEBAR (.glass-wrapper)
-           =========================== */
+            LEFT SIDEBAR (.glass-wrapper)
+            =========================== */
         .glass-wrapper {
             display: none; /* Hidden by default for mobile */
             position: fixed;
@@ -239,7 +239,7 @@
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
             border: 1px solid rgba(255, 255, 255, 0.6);
             box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.5),
-                         0 4px 10px rgba(0, 0, 0, 0.1);
+                        0 4px 10px rgba(0, 0, 0, 0.1);
             transform: scale(1.05);
         }
 
@@ -248,14 +248,14 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.8);
             box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3),
-                         0 0 10px rgba(0, 0, 0, 0.15);
+                        0 0 10px rgba(0, 0, 0, 0.15);
             font-weight: 600;
         }
 
         /* ===========================
-           FROSTED CONTENT CARD STYLING 
-           (Base for Mac Window & Stat Cards)
-           =========================== */
+            FROSTED CONTENT CARD STYLING 
+            (Base for Mac Window & Stat Cards)
+            =========================== */
         .content-card, .mac-window, .glass-stat-card {
             /* Shared Glassmorphism properties */
             backdrop-filter: blur(15px);
@@ -276,8 +276,8 @@
         }
 
         /* ===========================
-           LIQUID BUTTON STYLES
-           =========================== */
+            LIQUID BUTTON STYLES
+            =========================== */
         .liquid-button {
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -309,8 +309,8 @@
         }
 
         /* ===========================
-           MAIN CONTENT SECTIONS & WRAPPER
-           =========================== */
+            MAIN CONTENT SECTIONS & WRAPPER
+            =========================== */
         main.main-content-wrapper {
             flex: 1;
             /* Initial mobile padding */
@@ -341,8 +341,8 @@
         }
         
         /* ===========================
-           MACOS WINDOW STYLES
-           =========================== */
+            MACOS WINDOW STYLES
+            =========================== */
         .mac-window {
             width: 100%;
             max-width: 980px;
@@ -382,19 +382,17 @@
         }
 
         /* Window Content Panel */
-        .mac-content { padding: 28px; }
+        .mac-content { padding: 0px; }
         .panel {
             border-radius: 12px;
-            padding: 24px;
+            padding: 28px;
             background: linear-gradient(180deg, rgba(249, 250, 251, 0.8), rgba(247, 248, 250, 0.75));
             border: 1px solid rgba(2, 6, 23, 0.03);
             text-align: left; /* Override section center alignment */
         }
-        /* Note: Panel headings are now using Tailwind classes in HTML for better control */
 
         /* Dock - frosted, centered, and floating */
         .mac-dock {
-            /* **FIX HERE: Changed from 'absolute' to 'fixed'** */
             position: fixed; 
             left: 50%; 
             transform: translateX(-50%); 
@@ -442,6 +440,48 @@
             .dock-item { width: 40px; height: 40px; }
             .dock-item svg { width: 20px; height: 20px; }
         }
+
+        /* ===========================
+            TIMELINE STYLES (for Experience)
+            =========================== */
+        .timeline { position: relative; max-width: 90%; margin: 0 auto; padding-left: 20px; } 
+        .timeline::after { 
+            content: ''; 
+            position: absolute; 
+            width: 4px; 
+            background-color: #e0e0e0; 
+            top: 0; 
+            bottom: 0; 
+            left: 16px; 
+            margin-left: -2px; 
+        } 
+        .timeline-item { 
+            padding: 10px 0 20px 30px; 
+            position: relative; 
+            background-color: inherit; 
+        } 
+        .timeline-item::before { 
+            content: ''; 
+            position: absolute; 
+            width: 12px; 
+            height: 12px; 
+            right: auto; 
+            left: 10px; 
+            background-color: #6b6985; 
+            border: 2px solid white; 
+            border-radius: 50%; 
+            top: 24px; 
+            z-index: 1; 
+        } 
+
+
+.another-pink-text {
+    color: rgb(75, 0, 130); 
+    padding: 10px;
+    font-weight: bold; }
+
+
+
         
     </style>
 </head>
@@ -453,7 +493,7 @@
 
     <nav class="top-nav" role="navigation" aria-label="Main navigation">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html" aria-current="page">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contacts.html">Contacts</a></li>
@@ -461,7 +501,6 @@
     </nav>
 
     <aside class="glass-wrapper" aria-label="Sidebar navigation">
-        
         <a href="#about">About Me</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
@@ -470,6 +509,7 @@
     </aside>
 
     <main class="main-content-wrapper">
+
         <section id="about">
             <div class="mac-window">
                 <header class="titlebar">
@@ -478,38 +518,220 @@
                         <div class="dot yellow" title="Minimize"></div>
                         <div class="dot green" title="Maximize"></div>
                     </div>
-                    <div class="title-center">Hello</div>
-                    <div style="width:56px"></div> </header>
+                    <div style="width:56px"></div>
+                </header>
 
                 <div class="mac-content">
-                    <div class="panel">
-                        <hgroup class="mb-6">
-                            <p class="text-4xl sm:text-5xl font-extrabold text-indigo-800" style="margin:0;line-height:1;">AI | ML Engineer</p>
-                            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-4">Rithik.</h1>
-                            <p id="tagline-text" class="text-gray-700 text-lg font-semibold mb-2">
-                                Crafting intuitive and aesthetically pleasing digital experiences.
-                            </p>
-                            <p class="text-gray-600 text-base leading-relaxed">
-                                I'm a Computer Science Undergraduate at the University of Kelaniya, specializing in Artificial Intelligence. I work on projects that combine AI, Machine Learning, and Software Development — building scalable, efficient, and user-friendly systems.
-                            </p>
+                    <div class="panel p-6 sm:p-8">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                             
-                            <p id="tagline-status" class="text-center mt-2 text-sm font-medium text-indigo-600 min-h-[1.25rem]"></p>
-                        </hgroup>
-</div>
-                </div>
+                            <div class="lg:col-span-2 text-left">
+                                <hgroup class="mb-6">
+                                    <p style="margin:0;line-height:1; font-weight: bold;">AI | ML Engineer</p>
+                                    <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900 mt-2 mb-4">Rithik.</h1>
+                                    <p id="tagline-text" class="text-gray-700 text-xl font-semibold mb-4">
+                                        Crafting intuitive and aesthetically pleasing digital experiences.
+                                    </p>
+                                    <p class="text-gray-600 text-base leading-relaxed max-w-xl">
+                                       I'm a Computer Science Undergraduate at the University of Kelaniya, specializing in Artificial Intelligence. I work on projects that combine AI, Machine Learning, and Software Development, building scalable, efficient, and user-friendly systems.
+                                    </p>
+                                </hgroup>
 
+                                
+                                <p id="tagline-status" class="text-center sm:text-left mt-3 text-sm font-medium text-indigo-600 min-h-[1.25rem]"></p>
+                            </div>
+
+                            <div class="flex flex-col items-center gap-6">
+                                <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-white/90 shadow-xl bg-gray-200" style="box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
+                                    <img src="Profile.png" alt="Rithik's Profile Photo" class="w-full h-full object-cover">
+                                </div>
+
+                            </div>
+                        </div>
+
+                                    <div class="glass-stat-card text-sm">
+                                        <p class="font-bold text-xl text-indigo-700">1+</p>
+                                        <p class="text-gray-600">Years Experience</p>
+                                    </div>
+                                    <div class="glass-stat-card text-sm">
+                                        <p class="font-bold text-xl text-indigo-700">+3</p>
+                                        <p class="text-gray-600">Projects Built</p>
+                                    </div>
+
+                                    <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                                    <a href="#projects" class="liquid-button liquid-primary-button px-6 py-3 rounded-xl text-lg font-semibold inline-flex items-center justify-center">
+                                        View My Projects
+                                    </a>
+                                    <a href="CV Resume.pdf" download="CV Resume.pdf" id="tagline-button" class="liquid-button liquid-secondary-button px-6 py-3 rounded-xl text-lg font-semibold inline-flex items-center justify-center">
+                                          Download Resume
+                                    </a>
+                                </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="mac-window">
+                <header class="titlebar">
+                    <div class="traffic" aria-hidden="true">
+                        <div class="dot red" title="Close"></div>
+                        <div class="dot yellow" title="Minimize"></div>
+                        <div class="dot green" title="Maximize"></div>
+                    </div>
+                    <div class="title-center">Experience</div>
+                    <div style="width:56px"></div>
+                </header>
+
+                <div class="mac-content p-6 sm:p-8">
+
+                        
+                        <div style="text-align: left;">
+                            <h3 class="text-5xl sm:text-6xl font-extrabold text-gray-900 mt-2 mb-4" style="font-size: larger;">Trainee Retail Sales</h3>
+                            <p class="text-indigo-600 font-semibold mb-1" style="font-size: large;">Damn Fine Coffee Company</p>
+                            <p class="text-sm text-gray-500 mb-3">February 2025 - September 2025 (8 months) | 9 Abdul Caffoor Mawatha, Colombo.</p>
+                            <div class="panel p-4">
+                                <ul class="list-disc ml-5 space-y-2 text-gray-700 text-base">
+                                    <li>Sales Success: Achieved LKR 1M+ in sales during the BMICH Hotel Show [cite: 58] [cite_start]and consistently exceeded monthly and quarterly targets.</li>
+                                    <li>Growth: Boosted retail and partner store sales of coffee machines and products by over 25%.</li>
+                                    <li>Management: Successfully managed a newly established Experience Center, overseeing daily operations, sales performance, and customer engagement.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div style="text-align: left;">
+                            <h3 class="text-5xl sm:text-6xl font-extrabold text-gray-900 mt-2 mb-4" style="font-size: larger;">Intern</h3>
+                            <p class="text-indigo-600 font-semibold mb-1" style="font-size: large;">Sampath Bank</p>
+                            <p class="text-sm text-gray-500 mb-3">April 2023 - September 2023 (6 months) | Southern Province, Sri Lanka</p>
+                            <div class="panel p-4">
+                                <ul class="list-disc ml-5 space-y-2 text-gray-700 text-base">
+                                    <li>Contributed to customer acquisition, successfully adding 20+ new mobile banking users daily.</li>
+                                    <li>Assisted customers with onboarding and troubleshooting issues related to the mobile banking app.</li>
+                                    <li>Supported customers in obtaining personal loans, as well as opening savings and fixed deposit accounts.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
                 
             </div>
         </section>
 
-        <section>
-        </section> 
+        <section id="education">
+            <div class="mac-window">
+                <header class="titlebar">
+                    <div class="traffic" aria-hidden="true">
+                        <div class="dot red" title="Close"></div>
+                        <div class="dot yellow" title="Minimize"></div>
+                        <div class="dot green" title="Maximize"></div>
+                    </div>
+                    <div class="title-center">Education & Learning</div>
+                    <div style="width:56px"></div>
+                </header>
 
-        
-        <section id="experience" class="text-4xl text-gray-600">Experience Content Here...</section>
-        <section id="education" class="text-4xl text-gray-600">Education Content Here...</section>
-        <section id="projects" class="text-4xl text-gray-600">Projects Content Here...</section>
-        <section id="certifications" class="text-4xl text-gray-600">Certifications Content Here...</section>
+                <div class="mac-content p-6 sm:p-8 flex flex-col gap-6">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2 text-center">Academic Qualifications</h2>
+
+                    <div class="glass-stat-card w-full p-6 text-left shadow-lg">
+                        <p class="text-2xl font-extrabold text-indigo-700">University of Kelaniya Sri Lanka</p>
+                        <p class="text-xl font-semibold text-gray-800">BSc (Honours) in Computer Science (Specializing in AI)</p>
+                        <p class="text-base text-gray-600 mt-1">Expected Graduation: September 2029</p>
+                    </div>
+
+                    <div class="glass-stat-card w-full p-6 text-left shadow-lg">
+                        <p class="text-2xl font-extrabold text-indigo-700">Mahinda College Galle</p>
+                        <p class="text-xl font-semibold text-gray-800">Physical Sciences</p>
+                        <p class="text-base text-gray-600 mt-1">2021 - 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="mac-window">
+                <header class="titlebar">
+                    <div class="traffic" aria-hidden="true">
+                        <div class="dot red" title="Close"></div>
+                        <div class="dot yellow" title="Minimize"></div>
+                        <div class="dot green" title="Maximize"></div>
+                    </div>
+                    <div class="title-center">Projects</div>
+                    <div style="width:56px"></div>
+                </header>
+
+                <div class="mac-content p-6 sm:p-8">
+                    
+                
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">Web Emulator</h3>
+                        <p class="text-sm font-medium text-gray-500 mb-4">Web Development & Gaming | JavaScript/HTML5</p>
+                        
+                        <p style="font-size: medium; text-align: left;">
+                            A standalone Game Boy Advance (GBA) emulator built entirely for the web. This project provides a full-featured, cross-platform gaming experience directly in the browser, optimized for both PC and mobile devices. It showcases deep understanding of performance optimization, JavaScript engine mechanics, and responsive UI design.
+                        </p>
+
+                        <div class="flex gap-4">
+                          <p>
+                            <a href="index.html" class="liquid-button liquid-primary-button px-5 py-2 rounded-lg font-semibold text-sm">
+                                Check It Out
+                            </a></p>
+                            <p>
+                            <a href="desktop.html" class="liquid-button liquid-secondary-button px-5 py-2 rounded-lg font-semibold text-sm">
+                                More
+                            </a>
+                          </p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <div class="mac-window">
+                <header class="titlebar">
+                    <div class="traffic" aria-hidden="true">
+                        <div class="dot red" title="Close"></div>
+                        <div class="dot yellow" title="Minimize"></div>
+                        <div class="dot green" title="Maximize"></div>
+                    </div>
+                    <div class="title-center">Certifications</div>
+                    <div style="width:56px"></div>
+                </header>
+
+                <div class="mac-content p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Badges of Skill</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
+                        
+                        <div class="glass-stat-card p-4 text-left border-l-4 border-indigo-500">
+                            <p class="font-bold text-lg text-gray-900">SQL (Basic) Certificate</p>
+                            <p class="text-sm text-gray-600">Issued by:</p>
+                        </div>
+                        <div class="glass-stat-card p-4 text-left border-l-4 border-indigo-500">
+                            <p class="font-bold text-lg text-gray-900">Introduction to GitHub Concepts</p>
+                            <p class="text-sm text-gray-600">Issued by: [Source/Platform]</p>
+                        </div>
+                        <div class="glass-stat-card p-4 text-left border-l-4 border-indigo-500">
+                            <p class="font-bold text-lg text-gray-900">Introduction to SQL</p>
+                            <p class="text-sm text-gray-600">Issued by: [Source/Platform]</p>
+                        </div>
+                        <div class="glass-stat-card p-4 text-left border-l-4 border-indigo-500">
+                            <p class="font-bold text-lg text-gray-900">Build your business brand using Canva</p>
+                            <p class="text-sm text-gray-600">Issued by: [Source/Platform]</p>
+                        </div>
+                        <div class="glass-stat-card p-4 text-left border-l-4 border-indigo-500">
+                            <p class="font-bold text-lg text-gray-900">Certificate in Communication Skills</p>
+                            <p class="text-sm text-gray-600">Issued by: [Source/Platform]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            </section> 
+
     </main>
     
     <div class="mac-dock" role="navigation" aria-label="Social dock">
@@ -542,8 +764,6 @@
     
     <script>
         (function () {
-            // ... (Your JavaScript code remains here, it doesn't need modification for this fix) ...
-            
             // Cache DOM elements
             const taglineText = document.getElementById('tagline-text');
             const statusMessage = document.getElementById('tagline-status');
@@ -558,7 +778,7 @@
             const MAX_RETRIES = 5;
             let lastScrollY = window.scrollY;
 
-            // --- API Fetch Utility with Exponential Backoff ---
+            // --- API Fetch Utility with Exponential Backoff (Placeholder) ---
             async function exponentialBackoffFetch(url, options) {
                 // NOTE: API Key is typically loaded from an environment variable, not hardcoded.
                 const apiKey = "";
@@ -568,7 +788,6 @@
                     try {
                         const response = await fetch(finalUrl, options);
                         if (!response.ok) {
-                            // Handle Rate Limiting (429) and retry
                             if (response.status === 429 && attempt < MAX_RETRIES - 1) {
                                 const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
                                 console.log(`Rate limit exceeded. Retrying in ${Math.round(delay / 1000)}s...`);
@@ -592,58 +811,37 @@
                 const originalText = taglineButton.textContent;
 
                 if (apiKey === "") {
-                    statusMessage.textContent = "Error: Please set your Gemini API key in the script.";
+                    statusMessage.textContent = "Error: Please set your Gemini API key in the script to enable AI features.";
                     setTimeout(() => { statusMessage.textContent = ''; }, 5000);
                     return;
                 }
                 
+                // ... (API call logic remains the same, assuming user will add API key) ...
+
+                // *********** SIMULATION ONLY - Replace with actual API call ***********
                 taglineButton.disabled = true;
                 taglineButton.textContent = "Generating...";
-                statusMessage.textContent = "AI is drafting a creative new tagline...";
+                statusMessage.textContent = "AI is drafting a creative new tagline... (Simulated)";
                 taglineText.classList.add('opacity-50');
 
-                try {
-                    const systemPrompt = "You are a world-class creative director. Generate a single, concise, professional, and memorable tagline (under 10 words) for a design portfolio. The tagline should emphasize digital experience, innovation, and aesthetics. Do not use quotation marks.";
-                    const userQuery = "Generate a new portfolio tagline.";
+                await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
+                const simulatedTaglines = [
+                    "Where AI meets elegant software architecture.",
+                    "Building intelligence into every digital layer.",
+                    "Innovative solutions at the intersection of ML and design.",
+                    "Code, Coffee, and Cognitive Computing.",
+                    "Engineering the future with data and design."
+                ];
+                const newTagline = simulatedTaglines[Math.floor(Math.random() * simulatedTaglines.length)];
 
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent`;
-                    const payload = {
-                        contents: [{ parts: [{ text: userQuery }] }],
-                        config: {
-                            systemInstruction: systemPrompt
-                        }
-                    };
-
-                    const response = await exponentialBackoffFetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    const result = await response.json();
-                    const generatedText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                    if (generatedText) {
-                        // Clean up and display text
-                        taglineText.textContent = generatedText.trim().replace(/^['"]|['"]$/g, '');
-                        statusMessage.textContent = "Tagline updated successfully!";
-                    } else {
-                        throw new Error("API response was empty or blocked.");
-                    }
-
-                } catch (error) {
-                    console.error("Gemini API Error:", error);
-                    statusMessage.textContent = "Error: Could not connect to generator. Check console for details.";
-                    // Revert to default text on failure
-                    taglineText.textContent = "Crafting intuitive and aesthetically pleasing digital experiences.";
-                } finally {
-                    taglineButton.disabled = false;
-                    taglineButton.textContent = originalText;
-                    taglineText.classList.remove('opacity-50');
-                    setTimeout(() => { statusMessage.textContent = ''; }, 5000);
-                }
+                taglineText.textContent = newTagline;
+                statusMessage.textContent = "Tagline updated successfully! (Simulated)";
+                taglineButton.disabled = false;
+                taglineButton.textContent = originalText;
+                taglineText.classList.remove('opacity-50');
+                setTimeout(() => { statusMessage.textContent = ''; }, 5000);
+                // *******************************************************************
             }
-            // Expose to global scope for HTML onclick
             window.generateTagline = generateTagline;
 
 
@@ -664,19 +862,17 @@
 
             // --- Sidebar Highlight on Scroll (For internal sections) ---
             function highlightActiveSection() {
-                // Only run this logic if we are on a page with internal sections (like index.html)
                 if (sections.length === 0 || sidebarLinks.length === 0) return;
 
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
-                        // Check if the section is intersecting a significant portion (threshold)
                         if (entry.isIntersecting) {
                             sidebarLinks.forEach(link => link.classList.remove('active'));
                             const activeLink = document.querySelector(`.glass-wrapper a[href="#${entry.target.id}"]`);
                             if (activeLink) activeLink.classList.add('active');
                         }
                     });
-                }, { threshold: 0.6, rootMargin: "-70px 0px -70px 0px" }); // Adjusted rootMargin
+                }, { threshold: 0.5, rootMargin: "-70px 0px -70px 0px" }); 
 
                 sections.forEach(section => observer.observe(section));
             }

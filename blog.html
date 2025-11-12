@@ -339,6 +339,28 @@
         .loading-text {
             transition: opacity 0.3s ease;
         }
+
+
+        .reel-container {
+            /* REEL VIBE FIX 3: Use a max-width typical for a phone screen */
+            max-width: 450px; 
+            
+            /* REEL VIBE FIX 4: Center the container horizontally */
+            margin: 0 auto; 
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    padding: 50px 0; /* Optional: adds space above/below the reel */
+  }
+
+  /* 2. Optional: Style the iframe itself (give it a fixed size) */
+  .reel-container iframe {
+    width: 400px; 
+    height: 800px;
+
+
+
     </style>
 </head>
 
@@ -499,11 +521,7 @@
             }
         }
         
-        // --- NEW: Dynamic Nav and Scroll to Top Logic ---
-        let lastScrollY = window.scrollY;
-        const topNav = document.querySelector('.top-nav');
-        const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
-        const SCROLL_THRESHOLD = 100; // Distance to scroll down before hiding/showing nav and showing button
+    
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -546,14 +564,19 @@
 
     </script>
 
-  <main>
-    <div class="feed-container">
-      <iframe 
-        src="https://widget.taggbox.com/2203560?postId=2483295&caption=1&header=1" 
-        scrolling="no">
-      </iframe>
-    </div>
-  </main>
+<main>
+        <section id="reel-feed";">
+            <div class="reel-container">
+                <iframe 
+                    src="https://widget.taggbox.com/2203560?postId=2483295&caption=1&header=1"
+                    frameborder="0"
+                    title="Instagram Reel-Style Feed Embed">
+                </iframe>
+            </div>
+        </section>
+        
+        </main>
+   
 
   <!-- Scroll-to-top button -->
   <button id="scroll-to-top-btn" aria-label="Scroll to top of page">
@@ -565,7 +588,7 @@
   <script>
     // Scroll behavior for nav and button
     let lastScrollY = window.scrollY;
-    const topNav = document.querySelector('.top-nav');
+    const topNav = document.querySelector
     const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
     const SCROLL_THRESHOLD = 100;
 
